@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployy
+spec:
+  selector:
+    matchLabels:
+      app: ndo
+  template:
+    metadata:
+      labels:
+        app: ndo
+    spec:
+      containers:
+      - name: nginx
+        image: aayush250/nginx-custom:latest
+        ports:
+        - containerPort: 80
